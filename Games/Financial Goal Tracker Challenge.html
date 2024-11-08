@@ -8,11 +8,7 @@
     <link rel="icon" href="https://raw.githubusercontent.com/ayush-that/FinVeda/refs/heads/main/assets/images/Favicon1.ico" type="image/x-icon">
 </head>
 <body>
-    <div class="container">
-        <!-- Home Button -->
-        <div class="home-button">
-            <button onclick="goHome()">Home</button>
-        </div>
+    
         
         <h1>Financial Goal Tracker</h1>
         
@@ -217,10 +213,41 @@
             }
         }
 
-        // Function to navigate back to the homepage
-        function goHome() {
-            window.location.href = 'index.html';
-        }
+        
+
+        
     </script>
+
+    <!-- Back to Home Button -->
+<button id="backToHomeBtn" style="
+position: fixed;
+top: 20px;
+left: 20px;
+padding: 10px 20px;
+background-color: #007bff;
+color: white;
+border: none;
+border-radius: 5px;
+cursor: pointer;">
+Back to Home
+</button>
+
+<script>
+// Get the Back to Home button element
+const backToHomeBtn = document.getElementById("backToHomeBtn");
+
+// Add a click event to the button to redirect to the home page
+backToHomeBtn.addEventListener("click", function() {
+    // Redirect to the home page; use an absolute path if needed
+    window.location.href = "/index.html"; // Adjust as needed
+
+    // For a different URL structure, try:
+    // window.location.href = "https://yourdomain.com/index.html"; // Full URL
+});
+</script>
+
+
+
+
 </body>
 </html>
